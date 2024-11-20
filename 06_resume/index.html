@@ -4,10 +4,46 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>개발자 포트폴리오</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css"
+    />
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
-    <header class="w-full bg-gray-100 h-20"></header>
+    <header class="sticky top-0 bg-opacity-90 backdrop-blur-lg">
+      <nav
+        class="container max-w-4xl px-6 py-3 mx-auto flex justify-between items-center"
+      >
+        <!-- Logo -->
+        <div class="flex items-center space-x-4">
+          <h1 class="text-2xl font-bold">Nova</h1>
+          <p class="text-sm text-gray-500">Frontend Developer</p>
+        </div>
+
+        <!-- Menu -->
+        <div class="flex items-center gap-x-6">
+          <a href="#home" class="hover:text-blue-500 transition-colors">홈</a>
+          <a href="#about" class="hover:text-blue-500 transition-colors"
+            >소개</a
+          >
+          <a href="#skills" class="hover:text-blue-500 transition-colors"
+            >기술</a
+          >
+          <a href="#projects" class="hover:text-blue-500 transition-colors"
+            >프로젝트</a
+          >
+          <a href="#contact" class="hover:text-blue-500 transition-colors"
+            >연락처</a
+          >
+          <button
+            class="w-10 h-10 rounded-full bg-gray-200 focus:outline-none focus:ring focus:ring-blue-500"
+          >
+            <i class="fas fa-moon"></i>
+          </button>
+        </div>
+      </nav>
+    </header>
     <main class="container bg-gray-300 max-w-4xl px-6 py-12 mx-auto">
       <!-- Home Section -->
       <section class="bg-red-100 h-60"></section>
