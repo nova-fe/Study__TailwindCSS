@@ -31,7 +31,7 @@
         </div>
 
         <!-- Menu -->
-        <div class="flex items-center gap-x-6">
+        <div class="hidden md:flex items-center gap-x-6">
           <a href="#home" class="hover:text-blue-500 transition-colors">홈</a>
           <a href="#about" class="hover:text-blue-500 transition-colors"
             >소개</a
@@ -47,13 +47,49 @@
           >
           <button
             id="darkModeToggle"
-            class="w-10 h-10 rounded-full bg-gray-200 dark:bg-gray-700 focus:outline-none focus:ring focus:ring-blue-500"
+            class="p-2 w-10 h-10 rounded-full bg-gray-200 dark:bg-gray-700 focus:outline-none focus:ring focus:ring-blue-500"
           >
             <i class=""></i>
           </button>
         </div>
+
+        <!-- 모바일 메뉴 버튼 -->
+        <button
+          id="menuToggle"
+          class="p-2 text-gray-700 dark:text-white md:hidden"
+        >
+          <i class="fas fa-bars text-2xl"></i>
+        </button>
       </nav>
     </header>
+
+    <!-- 모바일 메뉴 -->
+    <aside
+      id="mobileMenu"
+      class="block md:hidden fixed right-0 inset-y-0 w-64 bg-white dark:bg-gray-800 shadow-lg translate-x-full transition-transform duration-300 z-20"
+    >
+      <button id="closeMenu" class="p-2 m-4 text-gray-700 dark:text-white">
+        <i class="fas fa-times text-2xl"></i>
+      </button>
+      <nav class="flex flex-col space-y-4 mt-10 px-6">
+        <a href="#home" class="hover:text-blue-500 transition-colors">홈</a>
+        <a href="#about" class="hover:text-blue-500 transition-colors">소개</a>
+        <a href="#skills" class="hover:text-blue-500 transition-colors">기술</a>
+        <a href="#projects" class="hover:text-blue-500 transition-colors"
+          >프로젝트</a
+        >
+        <a href="#contact" class="hover:text-blue-500 transition-colors"
+          >연락처</a
+        >
+        <button
+          id="darkModeToggleMobile"
+          class="p-2 w-full rounded-full bg-gray-200 dark:bg-gray-700 focus:outline-none focus:ring focus:ring-blue-500"
+        >
+          <i class="fas fa-moon"></i>
+        </button>
+      </nav>
+    </aside>
+
     <main class="container max-w-4xl px-6 py-12 mx-auto">
       <!-- Home Section -->
       <section class="flex justify-between items-center mb-12" id="home">
@@ -415,6 +451,7 @@
         </div>
       </section>
     </main>
+
     <footer class="w-full bg-gray-100 dark:bg-gray-800 py-6">
       <div class="container max-w-4xl mx-auto px-6 text-center">
         <p>&copy; 2024 김다희. All rights reserved.</p>
@@ -454,6 +491,17 @@
       document
         .getElementById('darkModeToggle')
         .addEventListener('click', toggleDarkMode);
+
+      const mobileMenu = document.getElementById('mobileMenu');
+      // 모바일 메뉴 열기
+      document.getElementById('menuToggle').addEventListener('click', () => {
+        mobileMenu.classList.toggle('translate-x-full');
+      });
+
+      // 모바일 메뉴 닫기
+      document.getElementById('closeMenu').addEventListener('click', () => {
+        mobileMenu.classList.toggle('translate-x-full');
+      });
 
       initialTheme();
     </script>
