@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="ko" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -14,11 +14,19 @@
         darkMode: 'selector',
       };
     </script>
+    <style>
+      [id] {
+        /* 스크롤시 상단에 여백 */
+        scroll-margin-top: 64px;
+      }
+    </style>
   </head>
   <body
     class="bg-white dark:bg-gray-900 text-black dark:text-white min-h-screen transition-colors duration-300"
   >
-    <header class="sticky top-0 bg-opacity-90 backdrop-blur-lg">
+    <header
+      class="sticky top-0 bg-opacity-70 dark:bg-opacity-70 backdrop-blur-sm bg-white dark:bg-gray-900 z-10"
+    >
       <nav
         class="container max-w-4xl px-6 py-3 mx-auto flex justify-between items-center"
       >
