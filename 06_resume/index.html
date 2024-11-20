@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="ko" class="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -9,8 +9,15 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css"
     />
     <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'selector',
+      };
+    </script>
   </head>
-  <body>
+  <body
+    class="bg-white dark:bg-gray-900 text-black dark:text-white min-h-screen transition-colors duration-300"
+  >
     <header class="sticky top-0 bg-opacity-90 backdrop-blur-lg">
       <nav
         class="container max-w-4xl px-6 py-3 mx-auto flex justify-between items-center"
@@ -18,7 +25,9 @@
         <!-- Logo -->
         <div class="flex items-center space-x-4">
           <h1 class="text-2xl font-bold">Nova</h1>
-          <p class="text-sm text-gray-500">Frontend Developer</p>
+          <p class="text-sm text-gray-500 dark:text-gray-100">
+            Frontend Developer
+          </p>
         </div>
 
         <!-- Menu -->
@@ -37,9 +46,9 @@
             >연락처</a
           >
           <button
-            class="w-10 h-10 rounded-full bg-gray-200 focus:outline-none focus:ring focus:ring-blue-500"
+            class="w-10 h-10 rounded-full bg-gray-200 dark:bg-gray-700 focus:outline-none focus:ring focus:ring-blue-500"
           >
-            <i class="fas fa-moon text-gray-700"></i>
+            <i class="fas fa-moon text-gray-700 dark:text-yellow-400"></i>
           </button>
         </div>
       </nav>
@@ -57,7 +66,7 @@
         <div class="text-right">
           <h1 class="text-4xl font-bold mb-2">Nova</h1>
           <p class="text-xl mb-4">혁신적인 개발자</p>
-          <p class="text-gray-600">
+          <p class="text-gray-600 dark:text-gray-400">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem unde
             doloribus eveniet, sapiente maxime sed voluptatem cupiditate illum
             accusantium tempora officiis asperiores eius, vero dolores animi
@@ -70,10 +79,10 @@
         <h2 class="text-3xl font-bold mb-6">소개</h2>
         <div class="grid grid-cols-2 gap-6">
           <article
-            class="bg-gray-100 rounded-md p-6 shadow-md hover:scale-105 transition-transform duration-300"
+            class="bg-gray-100 dark:bg-gray-800 rounded-md p-6 shadow-md hover:scale-105 transition-transform duration-300"
           >
             <h3 class="text-xl font-semibold mb-4">👨‍🎓 교육 및 활동</h3>
-            <ul class="text-gray-800 leading-relaxed">
+            <ul class="text-gray-800 dark:text-gray-300 leading-relaxed">
               <li>👉 2023 프론트엔드 개발자 인턴십 (ABC Tech)</li>
               <li>👉 2022 웹 개발 부트캠프 수료 (XYZ Coding School)</li>
               <li>👉 2021 오픈소스 프로젝트 참여 (오픈소스 커뮤니티)</li>
@@ -81,10 +90,10 @@
             </ul>
           </article>
           <article
-            class="bg-gray-100 rounded-md p-6 shadow-md hover:scale-105 transition-transform duration-300"
+            class="bg-gray-100 dark:bg-gray-800 rounded-md p-6 shadow-md hover:scale-105 transition-transform duration-300"
           >
             <h3 class="text-xl font-semibold mb-4">🧑‍💻 자격증</h3>
-            <ul class="text-gray-800 leading-relaxed">
+            <ul class="text-gray-800 dark:text-gray-300 leading-relaxed">
               <li>👉 2023 정보처리기사</li>
               <li>👉 2022 AWS Certified Solutions Architect</li>
               <li>👉 2021 자바 프로그래밍 1급</li>
@@ -142,7 +151,7 @@
         <h2 class="text-3xl font-bold mb-6">프로젝트</h2>
         <div class="grid grid-cols-2 gap-6">
           <article
-            class="bg-gray-100 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 overflow-hidden"
+            class="bg-gray-100 dark:bg-gray-800 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 overflow-hidden"
           >
             <img
               class="w-full h-48 object-cover"
@@ -150,25 +159,25 @@
               alt="전자상거래 플랫폼 이미지"
             />
             <div class="p-6">
-              <h3 class="font-semibold text-gray-800 mb-4">
+              <h3 class="font-semibold text-gray-800 dark:text-gray-100 mb-4">
                 전자상거래 플랫폼
               </h3>
               <!-- 기술스택 -->
               <div class="space-x-2 mb-6">
                 <span
-                  class="bg-gray-200 text-xs px-2 py-0.5 rounded-md text-gray-700 border border-gray-300"
+                  class="bg-gray-200 dark:bg-gray-700 text-xs px-2 py-0.5 rounded-md text-gray-700 dark:text-gray-100 border border-gray-300 dark:border-gray-600"
                   >React</span
                 >
                 <span
-                  class="bg-gray-200 text-xs px-2 py-0.5 rounded-md text-gray-700 border border-gray-300"
+                  class="bg-gray-200 dark:bg-gray-700 text-xs px-2 py-0.5 rounded-md text-gray-700 dark:text-gray-100 border border-gray-300 dark:border-gray-600"
                   >Node.js</span
                 >
                 <span
-                  class="bg-gray-200 text-xs px-2 py-0.5 rounded-md text-gray-700 border border-gray-300"
+                  class="bg-gray-200 dark:bg-gray-700 text-xs px-2 py-0.5 rounded-md text-gray-700 dark:text-gray-100 border border-gray-300 dark:border-gray-600"
                   >Express</span
                 >
                 <span
-                  class="bg-gray-200 text-xs px-2 py-0.5 rounded-md text-gray-700 border border-gray-300"
+                  class="bg-gray-200 dark:bg-gray-700 text-xs px-2 py-0.5 rounded-md text-gray-700 dark:text-gray-100 border border-gray-300 dark:border-gray-600"
                   >MongoDB</span
                 >
               </div>
@@ -176,7 +185,7 @@
               <div class="space-x-2">
                 <a
                   href="#"
-                  class="text-xs bg-gray-800 text-white px-3 py-1 rounded-md"
+                  class="text-xs bg-gray-800 dark:bg-gray-300 text-white dark:text-gray-800 px-3 py-1 rounded-md"
                   >Github</a
                 >
                 <a
@@ -188,7 +197,7 @@
             </div>
           </article>
           <article
-            class="bg-gray-100 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 overflow-hidden"
+            class="bg-gray-100 dark:bg-gray-800 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 overflow-hidden"
           >
             <img
               class="w-full h-48 object-cover"
@@ -196,25 +205,25 @@
               alt="전자상거래 플랫폼 이미지"
             />
             <div class="p-6">
-              <h3 class="font-semibold text-gray-800 mb-4">
+              <h3 class="font-semibold text-gray-800 dark:text-gray-100 mb-4">
                 전자상거래 플랫폼
               </h3>
               <!-- 기술스택 -->
               <div class="space-x-2 mb-6">
                 <span
-                  class="bg-gray-200 text-xs px-2 py-0.5 rounded-md text-gray-700 border border-gray-300"
+                  class="bg-gray-200 dark:bg-gray-700 text-xs px-2 py-0.5 rounded-md text-gray-700 dark:text-gray-100 border border-gray-300 dark:border-gray-600"
                   >React</span
                 >
                 <span
-                  class="bg-gray-200 text-xs px-2 py-0.5 rounded-md text-gray-700 border border-gray-300"
+                  class="bg-gray-200 dark:bg-gray-700 text-xs px-2 py-0.5 rounded-md text-gray-700 dark:text-gray-100 border border-gray-300 dark:border-gray-600"
                   >Node.js</span
                 >
                 <span
-                  class="bg-gray-200 text-xs px-2 py-0.5 rounded-md text-gray-700 border border-gray-300"
+                  class="bg-gray-200 dark:bg-gray-700 text-xs px-2 py-0.5 rounded-md text-gray-700 dark:text-gray-100 border border-gray-300 dark:border-gray-600"
                   >Express</span
                 >
                 <span
-                  class="bg-gray-200 text-xs px-2 py-0.5 rounded-md text-gray-700 border border-gray-300"
+                  class="bg-gray-200 dark:bg-gray-700 text-xs px-2 py-0.5 rounded-md text-gray-700 dark:text-gray-100 border border-gray-300 dark:border-gray-600"
                   >MongoDB</span
                 >
               </div>
@@ -222,7 +231,7 @@
               <div class="space-x-2">
                 <a
                   href="#"
-                  class="text-xs bg-gray-800 text-white px-3 py-1 rounded-md"
+                  class="text-xs bg-gray-800 dark:bg-gray-300 text-white dark:text-gray-800 px-3 py-1 rounded-md"
                   >Github</a
                 >
                 <a
@@ -234,7 +243,7 @@
             </div>
           </article>
           <article
-            class="bg-gray-100 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 overflow-hidden"
+            class="bg-gray-100 dark:bg-gray-800 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 overflow-hidden"
           >
             <img
               class="w-full h-48 object-cover"
@@ -242,25 +251,25 @@
               alt="전자상거래 플랫폼 이미지"
             />
             <div class="p-6">
-              <h3 class="font-semibold text-gray-800 mb-4">
+              <h3 class="font-semibold text-gray-800 dark:text-gray-100 mb-4">
                 전자상거래 플랫폼
               </h3>
               <!-- 기술스택 -->
               <div class="space-x-2 mb-6">
                 <span
-                  class="bg-gray-200 text-xs px-2 py-0.5 rounded-md text-gray-700 border border-gray-300"
+                  class="bg-gray-200 dark:bg-gray-700 text-xs px-2 py-0.5 rounded-md text-gray-700 dark:text-gray-100 border border-gray-300 dark:border-gray-600"
                   >React</span
                 >
                 <span
-                  class="bg-gray-200 text-xs px-2 py-0.5 rounded-md text-gray-700 border border-gray-300"
+                  class="bg-gray-200 dark:bg-gray-700 text-xs px-2 py-0.5 rounded-md text-gray-700 dark:text-gray-100 border border-gray-300 dark:border-gray-600"
                   >Node.js</span
                 >
                 <span
-                  class="bg-gray-200 text-xs px-2 py-0.5 rounded-md text-gray-700 border border-gray-300"
+                  class="bg-gray-200 dark:bg-gray-700 text-xs px-2 py-0.5 rounded-md text-gray-700 dark:text-gray-100 border border-gray-300 dark:border-gray-600"
                   >Express</span
                 >
                 <span
-                  class="bg-gray-200 text-xs px-2 py-0.5 rounded-md text-gray-700 border border-gray-300"
+                  class="bg-gray-200 dark:bg-gray-700 text-xs px-2 py-0.5 rounded-md text-gray-700 dark:text-gray-100 border border-gray-300 dark:border-gray-600"
                   >MongoDB</span
                 >
               </div>
@@ -268,7 +277,7 @@
               <div class="space-x-2">
                 <a
                   href="#"
-                  class="text-xs bg-gray-800 text-white px-3 py-1 rounded-md"
+                  class="text-xs bg-gray-800 dark:bg-gray-300 text-white dark:text-gray-800 px-3 py-1 rounded-md"
                   >Github</a
                 >
                 <a
@@ -280,7 +289,7 @@
             </div>
           </article>
           <article
-            class="bg-gray-100 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 overflow-hidden"
+            class="bg-gray-100 dark:bg-gray-800 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 overflow-hidden"
           >
             <img
               class="w-full h-48 object-cover"
@@ -288,25 +297,25 @@
               alt="전자상거래 플랫폼 이미지"
             />
             <div class="p-6">
-              <h3 class="font-semibold text-gray-800 mb-4">
+              <h3 class="font-semibold text-gray-800 dark:text-gray-100 mb-4">
                 전자상거래 플랫폼
               </h3>
               <!-- 기술스택 -->
               <div class="space-x-2 mb-6">
                 <span
-                  class="bg-gray-200 text-xs px-2 py-0.5 rounded-md text-gray-700 border border-gray-300"
+                  class="bg-gray-200 dark:bg-gray-700 text-xs px-2 py-0.5 rounded-md text-gray-700 dark:text-gray-100 border border-gray-300 dark:border-gray-600"
                   >React</span
                 >
                 <span
-                  class="bg-gray-200 text-xs px-2 py-0.5 rounded-md text-gray-700 border border-gray-300"
+                  class="bg-gray-200 dark:bg-gray-700 text-xs px-2 py-0.5 rounded-md text-gray-700 dark:text-gray-100 border border-gray-300 dark:border-gray-600"
                   >Node.js</span
                 >
                 <span
-                  class="bg-gray-200 text-xs px-2 py-0.5 rounded-md text-gray-700 border border-gray-300"
+                  class="bg-gray-200 dark:bg-gray-700 text-xs px-2 py-0.5 rounded-md text-gray-700 dark:text-gray-100 border border-gray-300 dark:border-gray-600"
                   >Express</span
                 >
                 <span
-                  class="bg-gray-200 text-xs px-2 py-0.5 rounded-md text-gray-700 border border-gray-300"
+                  class="bg-gray-200 dark:bg-gray-700 text-xs px-2 py-0.5 rounded-md text-gray-700 dark:text-gray-100 border border-gray-300 dark:border-gray-600"
                   >MongoDB</span
                 >
               </div>
@@ -314,7 +323,7 @@
               <div class="space-x-2">
                 <a
                   href="#"
-                  class="text-xs bg-gray-800 text-white px-3 py-1 rounded-md"
+                  class="text-xs bg-gray-800 dark:bg-gray-300 text-white dark:text-gray-800 px-3 py-1 rounded-md"
                   >Github</a
                 >
                 <a
@@ -338,7 +347,7 @@
               <input
                 type="text"
                 name="name"
-                class="w-full px-4 py-2 rounded-md border focus:outline-none focus:ring focus:ring-blue-500"
+                class="dark:bg-gray-700 dark:border-gray-600 dark:text-white w-full px-4 py-2 rounded-md border focus:outline-none focus:ring focus:ring-blue-500"
                 required
               />
             </div>
@@ -347,7 +356,7 @@
               <input
                 type="email"
                 name="email"
-                class="w-full px-4 py-2 rounded-md border focus:outline-none focus:ring focus:ring-blue-500"
+                class="dark:bg-gray-700 dark:border-gray-600 dark:text-white w-full px-4 py-2 rounded-md border focus:outline-none focus:ring focus:ring-blue-500"
                 required
               />
             </div>
@@ -356,7 +365,7 @@
               <textarea
                 type="text"
                 name="message"
-                class="w-full px-4 py-2 rounded-md border focus:outline-none focus:ring focus:ring-blue-500"
+                class="dark:bg-gray-700 dark:border-gray-600 dark:text-white w-full px-4 py-2 rounded-md border focus:outline-none focus:ring focus:ring-blue-500"
                 required
               ></textarea>
             </div>
@@ -372,7 +381,7 @@
             <a
               href="#"
               target="_blank"
-              class="flex items-center space-x-2 text-gray-600 hover:text-blue-500 transition-colors"
+              class="dark:text-gray-300 flex items-center space-x-2 text-gray-600 hover:text-blue-500 transition-colors"
             >
               <i class="fa-brands fa-github"></i>
               <span>Github</span>
@@ -405,7 +414,7 @@
         </div>
       </section>
     </main>
-    <footer class="w-full bg-gray-100 py-6">
+    <footer class="w-full bg-gray-100 dark:bg-gray-800 py-6">
       <div class="container max-w-4xl mx-auto px-6 text-center">
         <p>&copy; 2024 김다희. All rights reserved.</p>
       </div>
