@@ -13,9 +13,19 @@
   <body class="bg-gray-200">
     <div class="flex h-screen">
       <!-- 사이드 메뉴 -->
-      <aside class="bg-gray-800 w-64 text-white px-2 py-7 space-y-6">
-        <div class="px-4 mb-6">
+      <!-- 사이드메뉴 반응형 참고사항
+          1. 모바일에서 왼쪽으로 안 보이게 하기 위한 클래스명: -translate-x-full
+          2. PC에선 HTML  요소의 흐름에서 깰 수 있도록 absolute 추가(콘텐츠가 왼쪽에 붙도록 하기 위해)
+      -->
+      <aside
+        id="sidebar"
+        class="bg-gray-800 w-64 text-white px-2 py-7 space-y-6 inset-y-0 left-0 -translate-x-full lg:translate-x-0 absolute lg:relative transition duration-200 z-10"
+      >
+        <div class="flex items-center px-4 mb-6 justify-between">
           <h2 class="text-2xl font-semibold">대시보드</h2>
+          <button id="closedSidebar" class="text-white lg:hidden">
+            <i class="fas fa-times"></i>
+          </button>
         </div>
         <nav class="flex flex-col">
           <a
@@ -54,18 +64,25 @@
         <header
           class="h-16 bg-white border-b-4 border-indigo-700 flex justify-between items-center px-4 py-2"
         >
-          <!-- 검색 -->
-          <div class="relative">
-            <span class="absolute left-0 pl-3 inset-y-0 flex items-center"
-              ><i class="fas fa-search text-gray-500"></i
-            ></span>
-            <input
-              class="w-64 h-10 focus:border-indigo-600 pl-10 pr-4 rounded-md"
-              type="text"
-              placeholder="검색"
-            />
+          <div class="flex items-center">
+            <!-- 모바일 메뉴 버튼 -->
+            <button id="sidebarToggle" class="text-gray-500 lg:hidden p-2 mr-4">
+              <i class="fas fa-bars"></i>
+            </button>
+            <!-- 검색 -->
+            <div class="relative">
+              <span class="absolute left-0 pl-3 inset-y-0 flex items-center"
+                ><i class="fas fa-search text-gray-500"></i
+              ></span>
+              <input
+                class="w-64 h-10 focus:border-indigo-600 pl-10 pr-4 rounded-md"
+                type="text"
+                placeholder="검색"
+              />
+            </div>
           </div>
 
+          <!-- 알림/프로필 이미지 -->
           <div class="flex items-center gap-x-4">
             <button class="text-gray-600"><i class="fas fa-bell"></i></button>
             <button class="w-8 h-8 rounded-full overflow-hidden items-center">
@@ -81,7 +98,9 @@
         <main class="flex-1 bg-gray-200">
           <div class="container mx-auto px-6 py-8">
             <h3 class="text-gray-700 text-3xl font-semibold">대시보드</h3>
-            <div class="mt-8 grid grid-cols-3 gap-6">
+            <div
+              class="mt-8 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"
+            >
               <div class="flex items-center bg-white rounded-md px-5 py-6">
                 <div
                   class="rounded-full bg-indigo-600 w-12 h-12 flex items-center justify-center bg-opacity-75"
@@ -255,5 +274,17 @@
         </main>
       </div>
     </div>
+    <script>
+      // 모바일 사이드메뉴 열기
+      document.getElementById('sidebarToggle').addEventListener('click', () => {
+        document
+          .getElementById('sidebar')
+          .classList.toggle('-translate-x-full');
+      });
+      // 모바일 사이드메뉴 닫기
+      document.getElementById('closedSidebar').addEventListener('click', () => {
+        document.getElementById('sidebar').classList.add('-translate-x-full');
+      });
+    </script>
   </body>
 </html>
